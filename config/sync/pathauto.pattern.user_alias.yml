@@ -1,0 +1,14 @@
+uuid: 9bb23196-c602-45e7-8b97-575cbaf910f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user_alias
+label: user-alias
+type: 'canonical_entities:user'
+pattern: '[user:roles:last]/[user:account-name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

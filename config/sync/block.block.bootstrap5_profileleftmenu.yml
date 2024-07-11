@@ -1,0 +1,29 @@
+uuid: 89b660f2-a782-4ba3-b750-5a3e5b94213f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.profile-left-menu
+  module:
+    - system
+  theme:
+    - bootstrap5
+id: bootstrap5_profileleftmenu
+theme: bootstrap5
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:profile-left-menu'
+settings:
+  id: 'system_menu_block:profile-left-menu'
+  label: 'Profile Left Menu'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/my-profile\r\n/employee/*"

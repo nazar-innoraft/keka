@@ -1,0 +1,46 @@
+uuid: 0a721128-1ca0-4101-b52e-b7217c05ab7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - eca_base
+    - eca_content
+    - eca_user
+    - user
+id: user_approve2
+modeller: core
+label: 'User approve2'
+version: ''
+weight: 0
+events:
+  eca_base_eca_custom:
+    plugin: 'eca_base:eca_custom'
+    label: 'ECA custom event'
+    configuration:
+      event_id: ''
+    successors:
+      -
+        id: user_block_user_action
+        condition: eca_entity_is_new
+  user_set_user:
+    plugin: 'user:set_user'
+    label: 'Set current user'
+    configuration: {  }
+    successors:
+      -
+        id: user_block_user_action
+        condition: eca_entity_is_new
+conditions:
+  eca_entity_is_new:
+    plugin: eca_entity_is_new
+    configuration:
+      negate: false
+      entity: ''
+gateways: {  }
+actions:
+  user_block_user_action:
+    plugin: user_block_user_action
+    label: 'Block the selected users'
+    configuration:
+      object: ''
+    successors: {  }

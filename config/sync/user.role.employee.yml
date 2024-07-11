@@ -1,0 +1,16 @@
+uuid: 0048bc35-15f0-4fed-bf2e-aa978017c651
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.leaves
+  module:
+    - node
+id: employee
+label: Employee
+weight: 5
+is_admin: null
+permissions:
+  - 'create leaves content'
+  - 'delete own leaves content'
+  - 'edit own leaves content'

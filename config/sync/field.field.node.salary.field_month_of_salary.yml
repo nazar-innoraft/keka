@@ -1,0 +1,21 @@
+uuid: 51f57ac5-dd73-440d-a88f-57fbd0f3d38c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_month_of_salary
+    - node.type.salary
+  module:
+    - datetime
+id: node.salary.field_month_of_salary
+field_name: field_month_of_salary
+entity_type: node
+bundle: salary
+label: 'Month of salary'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

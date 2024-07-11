@@ -1,0 +1,24 @@
+uuid: 9453952a-5d22-4c56-9c2c-61d9600af2af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.leaves
+  module:
+    - text
+id: node.leaves.body
+field_name: body
+entity_type: node
+bundle: leaves
+label: 'Reason of leave'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

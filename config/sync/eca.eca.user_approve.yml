@@ -1,0 +1,36 @@
+uuid: 36b7214c-7f9b-4606-ac8a-d2032bda5aab
+langcode: en
+status: true
+dependencies:
+  module:
+    - eca_user
+    - user
+id: user_approve
+modeller: core
+label: 'User approve'
+version: ''
+weight: 0
+events:
+  user_login:
+    plugin: 'user:login'
+    label: 'Login of a user'
+    configuration: {  }
+    successors:
+      -
+        id: user_block_user_action
+        condition: eca_user_role
+conditions:
+  eca_user_role:
+    plugin: eca_user_role
+    configuration:
+      account: ''
+      role: employee
+      negate: false
+gateways: {  }
+actions:
+  user_block_user_action:
+    plugin: user_block_user_action
+    label: 'Block the selected users'
+    configuration:
+      object: ''
+    successors: {  }

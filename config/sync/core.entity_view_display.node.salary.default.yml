@@ -1,0 +1,48 @@
+uuid: 4ae51865-2447-458c-b825-24cc99449771
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.salary.field_employees
+    - field.field.node.salary.field_month_of_salary
+    - field.field.node.salary.field_status
+    - node.type.salary
+  module:
+    - datetime
+    - options
+    - user
+id: node.salary.default
+targetEntityType: node
+bundle: salary
+mode: default
+content:
+  field_employees:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_month_of_salary:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_status:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

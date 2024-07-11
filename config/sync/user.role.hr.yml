@@ -1,0 +1,30 @@
+uuid: a4c2422b-6cf6-4e68-b925-5906a16c2305
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.leaves
+    - node.type.salary
+  module:
+    - node
+id: hr
+label: HR
+weight: 4
+is_admin: null
+permissions:
+  - 'create leaves content'
+  - 'create salary content'
+  - 'delete any leaves content'
+  - 'delete any salary content'
+  - 'delete leaves revisions'
+  - 'delete own leaves content'
+  - 'delete own salary content'
+  - 'delete salary revisions'
+  - 'edit any leaves content'
+  - 'edit any salary content'
+  - 'edit own leaves content'
+  - 'edit own salary content'
+  - 'revert leaves revisions'
+  - 'revert salary revisions'
+  - 'view leaves revisions'
+  - 'view salary revisions'

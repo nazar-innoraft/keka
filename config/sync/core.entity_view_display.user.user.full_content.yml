@@ -1,0 +1,115 @@
+uuid: 87cc1c9b-3cb7-4bab-883c-037032f98854
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.full_content
+    - field.field.user.user.field_name
+    - field.field.user.user.field_phone_number
+    - field.field.user.user.field_social_links
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - link
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          a120ef76-1f90-4f32-8be7-3dbdf888e676:
+            uuid: a120ef76-1f90-4f32-8be7-3dbdf888e676
+            region: content
+            configuration:
+              id: 'field_block:user:user:user_picture'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          b0689624-90e7-46ae-935d-c3834c8a84cf:
+            uuid: b0689624-90e7-46ae-935d-c3834c8a84cf
+            region: content
+            configuration:
+              id: 'extra_field_block:user:user:member_for'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 1
+            additional: {  }
+          7a7d8893-1244-4a6e-bfdd-085d171c012c:
+            uuid: 7a7d8893-1244-4a6e-bfdd-085d171c012c
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_social_links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: link
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
+id: user.user.full_content
+targetEntityType: user
+bundle: user
+mode: full_content
+content:
+  field_social_links:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  user_picture:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_name: true
+  field_phone_number: true
