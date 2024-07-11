@@ -1,0 +1,29 @@
+uuid: 80b97fa3-3832-483a-b76a-ac8ffc0c9fa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.last_salary
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap5
+id: bootstrap5_views_block__last_salary_block_1
+theme: bootstrap5
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:last_salary-block_1'
+settings:
+  id: 'views_block:last_salary-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/my-profile\r\n/employee/*"

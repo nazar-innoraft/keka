@@ -1,0 +1,8 @@
+uuid: 7be184f8-ef56-4db1-85bf-74bf90ef8b55
+langcode: en
+status: true
+dependencies: {  }
+id: profile-left-menu
+label: 'Profile Left Menu'
+description: ''
+locked: false

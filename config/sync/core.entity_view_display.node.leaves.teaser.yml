@@ -1,0 +1,32 @@
+uuid: 5f0907c8-941f-44ba-951c-fb4f11b339f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.leaves.body
+    - field.field.node.leaves.field_leave_dates
+    - node.type.leaves
+  module:
+    - text
+    - user
+id: node.leaves.teaser
+targetEntityType: node
+bundle: leaves
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_leave_dates: true

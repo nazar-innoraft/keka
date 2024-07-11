@@ -1,0 +1,33 @@
+uuid: 39f3ff21-23dc-4cdb-9625-68cad0c7739c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_employees
+    - node.type.salary
+id: node.salary.field_employees
+field_name: field_employees
+entity_type: node
+bundle: salary
+label: Employees
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: role
+      role:
+        employee: employee
+        administrator: '0'
+        hr: '0'
+    include_anonymous: true
+field_type: entity_reference

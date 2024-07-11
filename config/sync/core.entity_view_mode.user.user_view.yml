@@ -1,0 +1,11 @@
+uuid: b3c258c9-448e-4961-8de4-553bbd05cf0e
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.user_view
+label: 'User View'
+description: ''
+targetEntityType: user
+cache: true

@@ -1,0 +1,11 @@
+uuid: 648aa142-e6d2-4c08-9d51-a471c632852a
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.full_content
+label: 'Full Content'
+description: ''
+targetEntityType: user
+cache: true
